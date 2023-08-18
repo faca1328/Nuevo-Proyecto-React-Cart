@@ -15,7 +15,7 @@ const {productsList, buyProduct, addProduct, restProduct, deleteProduct} = useCo
 
   return (
     <>
-      <table class="table">
+      <table className="table">
         <thead>
           <tr>
             <th scope="col">Name</th>

@@ -4,7 +4,7 @@ import { ProductContext } from "../../Context/ProductContext"
 import { CartContext } from "../../Context/CartContext"
 
 export function ProductsScreen() {
-
+  
     const {products} = useContext( ProductContext )
 
     const {productsList, buyProduct, addProduct, restProduct, deleteProduct} = useContext(CartContext) // para poder pasarselos a las Cards

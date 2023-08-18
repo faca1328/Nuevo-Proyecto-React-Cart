@@ -1,13 +1,15 @@
 import { Badge } from "@mui/material";
 import { useContext } from "react";
-import { NavLink } from "react-router-dom";
-import { CartContext } from "../Context/CartContext";
+import { NavLink, Route } from "react-router-dom";
+import { CartContext } from "../../Context/CartContext";
+import { NavInput } from "./NavInput";
+import { NavLogin } from "./NavLogin";
 
 
 
 export function NavBar() {
 
-    const {productsList} = useContext(CartContext)
+    const { productsList } = useContext(CartContext)
 
     return (
         <>
@@ -16,12 +18,13 @@ export function NavBar() {
                 <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
                 </button>
+
+                <NavLogin />
+
+                <NavInput />
+                <NavLink to='/products' className="nav-link" href="#">Products</NavLink>
+                
                 <div className="collapse navbar-collapse" id="navbarNav">
-                    <ul className="navbar-nav">
-                        <li className="nav-item active">
-                            <NavLink to='/products' className="nav-link" href="#">Products</NavLink>
-                        </li>
-                    </ul>
                     <Badge badgeContent={productsList.length} color="secondary">
                         <NavLink to='/cart' className="nav-link" href="#">🛒</NavLink>
                     </Badge>

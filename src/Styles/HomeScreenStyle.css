@@ -1,0 +1,41 @@
+.home-scree-container {
+    position: relative;
+}
+
+.carousel {
+    margin-bottom: 20px;
+}
+
+.carousel::before {
+    background: linear-gradient(-180deg, rgba(234, 237, 237, 0), #E3E6E6);
+    bottom: 0;
+    content: "";
+    left: 0;
+    pointer-events: none;
+    position: absolute;
+    right: 0;
+    top: 250px;
+    z-index: 1;
+}
+
+
+@media (max-width: 768px) {
+    .carousel::before {
+        top: -30px;
+        height: 50px;
+    }
+}
+
+.element {
+    position: absolute; /* Cambiamos a posición absoluta */
+    z-index: 2;
+    bottom: 5%; /* Ajusta la distancia desde la parte inferior según tu preferencia */
+
+}
+
+
+.home-separate {
+    margin-top: 23em;
+    padding: 0;
+    margin-bottom: 0;
+}

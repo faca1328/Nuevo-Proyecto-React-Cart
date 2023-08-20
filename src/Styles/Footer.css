@@ -1,0 +1,21 @@
+.footer-container {
+    display: flex;
+    justify-content: center;
+    padding: 10px 100px;
+    background-color: #232F3E;
+    color: #FFF;
+}
+
+.footer-list-container{
+    padding: 0px 80px;
+}
+
+.footer-button{
+    width: 100%;
+    border: 0px;
+    padding: 10px 0px;
+    background-color: #37475A;
+    color: #FFF;
+}
+
+

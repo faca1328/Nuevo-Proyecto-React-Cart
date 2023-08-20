@@ -1,36 +1,48 @@
-/* Estilos para la tarjeta */
-.tarjeta {
-    display: flex;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    padding: 10px;
-    margin-bottom: 10px;
-  }
-  
-  .tarjeta-imagen {
-    width: 100px;
-    height: 100px;
-    object-fit: cover;
-    border-radius: 4px;
-    margin-right: 10px;
-  }
-  
-  .tarjeta-contenido {
-    flex: 1;
-  }
-  
-  .tarjeta-titulo {
-    margin: 0;
-  }
-  
-  .tarjeta-descripcion {
-    margin: 0;
-    margin-bottom: 10px;
-  }
+.tarjetas {
+  border: 1px solid rgba(99, 99, 99, 1);
+  box-shadow: -2px 0px 25px 2px rgba(0, 0, 0, 0.55);
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+}
+
+.tarjeta-imagen {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.tarjeta-contenido {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.tarjeta-titulo {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 5px;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  hyphens: auto;
+}
+
+.tarjeta-descripcion {
+  font-size: 14px;
+  color: #555;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
   
   .tarjeta-precio {
-    margin: 0;
-    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 10px;
   }
   
   .boton-agregar {

@@ -1,0 +1,7 @@
+.product-screen-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Muestra las tarjetas en una cuadrícula de 4 columnas */
+    gap: 20px; /* Espacio entre las tarjetas */
+    border-radius: 5px; /* Borde redondeado para las tarjetas */
+    padding: 20px; /* Espaciado interno para las tarjetas */
+}

@@ -1,0 +1,25 @@
+
+
+.home-cards-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    /* Muestra las tarjetas en una cuadrícula de 4 columnas */
+    gap: 20px;
+    /* Espacio entre las tarjetas */
+    border-radius: 5px;
+    /* Borde redondeado para las tarjetas */
+    padding: 20px;
+    /* Espaciado interno para las tarjetas */
+    width: 100%;
+}
+
+.home-cards-title {
+    margin-left: 1.8%;
+    width: 96.5%;
+    padding: 5px;
+    border: 1px solid rgba(99, 99, 99, 1);
+    box-shadow: -2px 0px 25px 2px rgba(0, 0, 0, 0.55);
+    background-color: white;
+}
+
+

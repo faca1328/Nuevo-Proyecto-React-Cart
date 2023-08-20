@@ -1,4 +1,4 @@
-
+import '../Styles/Footer.css'
 
 export function Footer() {
 
@@ -9,11 +9,11 @@ export function Footer() {
         })
     }
 
-
     return (
         <>
-            <button onClick={scrollToTop}> Back to top </button>
-            <div>
+            <button onClick={scrollToTop} className='footer-button'> Back to top </button>
+        <div className='footer-container'>
+            <div className='footer-list-container'>
                 <p> Get to know us </p>
                 <ul>
                     <li>Carrers</li>
@@ -23,7 +23,7 @@ export function Footer() {
                 </ul>
             </div>
 
-            <div>
+            <div className='footer-list-container'>
                 <p> Let us help you </p>
                 <ul>
                     <li>Your Account</li>
@@ -33,7 +33,7 @@ export function Footer() {
                 </ul>
             </div>
 
-            <div>
+            <div className='footer-list-container'>
                 <p> Follow us on : </p>
                 <ul>
                     <li>Instagram</li>
@@ -42,6 +42,7 @@ export function Footer() {
                     <li>News Letter</li>
                 </ul>
             </div>
+        </div>
         </>
     )
 }

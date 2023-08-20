@@ -2,6 +2,7 @@ import { Cards } from "../Cards"
 import { useContext } from "react"
 import { ProductContext } from "../../Context/ProductContext"
 import { CartContext } from "../../Context/CartContext"
+import "../../Styles/ProductScreenStyle.css"
 
 export function ProductsScreen() {
   
@@ -27,6 +28,7 @@ export function ProductsScreen() {
    <h2>Products :</h2>
    <hr />
 
+    <div className="product-screen-container">
     {products.map(product => (
         <Cards // le pasamos las siguientes props al hijo com los valores que sacamos del fetch y seteamos en 'products'
         image={product.image}
@@ -38,6 +40,7 @@ export function ProductsScreen() {
         handleDelete = {() => handleDelete(product.id)}
         />
 ))}
+    </div>
    </>
   )
 }

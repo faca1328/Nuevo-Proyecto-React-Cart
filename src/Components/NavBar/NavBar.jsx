@@ -3,7 +3,8 @@ import { useContext } from "react";
 import { NavLink, Route } from "react-router-dom";
 import { CartContext } from "../../Context/CartContext";
 import { NavInput } from "./NavInput";
-import { NavLogin } from "./NavLogin";
+import { NavLogin } from "./NavLogin"
+import '../../Styles/NavBarStyle.css'
 
 
 
@@ -13,7 +14,7 @@ export function NavBar() {
 
     return (
         <>
-            <nav className="navbar navbar-expand-lg navbar-light bg-light">
+            <nav className="navbar navbar-expand-lg">
                 <NavLink to='/' className="navbar-brand" href="#">Home</NavLink>
                 <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>

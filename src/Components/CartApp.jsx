@@ -5,7 +5,8 @@ import { CartScreen } from "./Routes/CartScreen";
 import { ProductProvider } from "../Context/ProductProvider";
 import { CartProvider } from "../Context/CartProvider";
 import { Home } from "./Routes/HomeScreen/Home";
-import { Footer } from "./Footer";
+
+
 
 export function CartApp() {
     return (
@@ -26,11 +27,10 @@ export function CartApp() {
                     </Routes>
                 </div>
 
-
-                <Footer/>
-
-
             </CartProvider>
+
+                
         </ProductProvider>
+
     )
 }

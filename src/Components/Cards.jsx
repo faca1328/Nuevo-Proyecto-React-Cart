@@ -26,7 +26,7 @@ export function Cards({ image, title, price, description, handleBuy, handleAdd, 
             </div>
 
                 <div>
-                <p className="tarjeta-precio">{price}</p>
+                <p className="tarjeta-precio"> $ {price}</p>
                     {added ? <button className="boton-quitar" onClick={delet}> Delete </button>
                         : <button className="boton-agregar" onClick={add}> Buy </button>}
                 </div>

@@ -8,21 +8,21 @@ import '../../Styles/NavBarStyle.css'
 
 
 
-export function NavBar() {
+export function NavBar({ category, setCategory }) {
 
     const { productsList } = useContext(CartContext)
 
     return (
         <>
             <nav className="navbar navbar-expand-lg">
-                <NavLink to='/' className="navbar-brand" href="#">Home</NavLink>
+                <NavLink to='/' className="navbar-brand" href="#"><img src="../../../img/icons8-amazon-s3-48.png" alt="home-img" /></NavLink>
                 <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
                 </button>
 
                 <NavLogin />
 
-                <NavInput />
+                <NavInput category={category} setCategory={setCategory}/>
                 <NavLink to='/products' className="nav-link" href="#">Products</NavLink>
                 
                 <div className="collapse navbar-collapse" id="navbarNav">

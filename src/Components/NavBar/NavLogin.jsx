@@ -1,7 +1,8 @@
+import '../../Styles/NavLogin.css'
 
 export function NavLogin() {
   return (
-    <button>
+    <button className='myButton'>
         Login
     </button>
   )

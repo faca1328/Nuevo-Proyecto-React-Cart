@@ -5,14 +5,18 @@ import { CartScreen } from "./Routes/CartScreen";
 import { ProductProvider } from "../Context/ProductProvider";
 import { CartProvider } from "../Context/CartProvider";
 import { Home } from "./Routes/HomeScreen/Home";
+import { useState } from 'react';
 
 
 
 export function CartApp() {
+
+    const [category, setCategory] = useState('All');
+
     return (
         <ProductProvider>
             <CartProvider>
-                <NavBar></NavBar>
+                <NavBar category={category} setCategory={setCategory}></NavBar>
 
                 
                 <Outlet/>
@@ -21,7 +25,7 @@ export function CartApp() {
                 <div>
                     <Routes>
 
-                        <Route path='/products' element={<ProductsScreen />}></Route>
+                        <Route path='/products' element={<ProductsScreen category={category}/>}></Route>
                         <Route path='/cart' element={<CartScreen />}></Route>
                         <Route path='/' element={<Home/>}></Route>
                     </Routes>

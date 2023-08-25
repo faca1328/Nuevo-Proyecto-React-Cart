@@ -1,20 +1,27 @@
-import { useState } from "react"
+import { useContext } from "react"
 import '../Styles/Cards.css'
+import { CartContext } from "../Context/CartContext";
+
 
 
 
 export function Cards({ image, title, price, description, handleBuy, handleAdd, handleRest, handleDelete }) { //desestructuramos las props recibidas por el padre.
 
-    const [added, setAdded] = useState(false) // chequea si esta agregado el producto
 
+    const { productsList } = useContext(CartContext);
+
+     // Comprobar si el producto ya está en el carrito
+    const isProductInCart = productsList.some((item) => item.title === title);
+    
+
+ 
     const add = () => {
         handleBuy()
-        setAdded(true)
+        
     }
 
     const delet = () => {
         handleDelete()
-        setAdded(false)
     }
 
     return (
@@ -27,8 +34,13 @@ export function Cards({ image, title, price, description, handleBuy, handleAdd, 
 
                 <div>
                 <p className="tarjeta-precio"> $ {price}</p>
-                    {added ? <button className="boton-quitar" onClick={delet}> Delete </button>
-                        : <button className="boton-agregar" onClick={add}> Buy </button>}
+                    {
+                    isProductInCart 
+                    ? 
+                    <button className="boton-quitar" onClick={delet}> Delete </button>
+                    :                  
+                    <button className="boton-agregar" onClick={add}> Buy </button>
+                    }
                 </div>
         </div>
     )

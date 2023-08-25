@@ -21,7 +21,7 @@ export function ProductsScreen({ category }) {
     // Actualizar el estado de carga cuando los datos se carguen
     setLoading(false);
 
-    console.log(category, products);
+    
   }, [category, products]);
 
   const handleBuy = (item) => {

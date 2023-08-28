@@ -52,8 +52,6 @@ export function CartProvider({ children }) {
             // Si los datos en el localStorage no son válidos, reinicializa el localStorage
             localStorage.setItem("products", JSON.stringify([item]));
         }
-
-        console.log("Productos en el localStorage:", storedProducts);
     }
 
     useEffect(() => {
@@ -62,9 +60,6 @@ export function CartProvider({ children }) {
 
         // Dispatch una acción para cargar los datos en productsList
         dispatch({ type: "[cart] load items", payload: storedProducts });
-
-        console.log(storedProducts);
-        console.log(productsList);
     }, []);
 
 
@@ -105,7 +100,6 @@ export function CartProvider({ children }) {
         }
         dispatch(action)
         localStorage.setItem("products", JSON.stringify(updatedCart));
-        console.log("Borraste algo:", storedProducts);
     }
 
 

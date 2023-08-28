@@ -15,7 +15,7 @@ export function CartScreen() {
     productsList.forEach((item) => {
       deleteProduct(item.id);
     });
-
+    localStorage.clear();
     print()
   }
 

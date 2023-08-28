@@ -23,7 +23,7 @@ export function NavBar({ category, setCategory }) {
                 <NavLogin />
 
                 <NavInput category={category} setCategory={setCategory}/>
-                <NavLink to='/products' className="nav-link" href="#">Products</NavLink>
+                <NavLink to='/products' className="nav-link products-btn" href="#">Products</NavLink>
                 
                 <div className="collapse navbar-collapse" id="navbarNav">
                     <Badge badgeContent={productsList.length} color="secondary">

@@ -67,12 +67,14 @@ export function NavLogin() {
                   value={username}
                   onChange={handleUsernameChange}
                   maxLength={20}
+                  minLength={2}
                 />
                 <input
                   type="password"
                   className="form-control"
                   placeholder="Password"
                   maxLength={20}
+                  minLength={2}
                 />
               </div>
               <div className="modal-footer">
